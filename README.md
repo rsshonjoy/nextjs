@@ -45,3 +45,12 @@
 - The tweets that I see also need to be SEO friendly as it is public content that anyone in the world can see.
 - To fetch tweets specify to the user, we need the userId. And that can be obtained only if have we access to the incomming request.
 - You could do it client side in useEffect for example but that means you again miss out on SEO.
+
+## Server-side Rendering
+- SSR is a form pre-rendering where the HTML is generated at request time.
+- SSR is required when you need to fetch data pre request and also when you need to fetch personalized data keeping in mind SEO.
+
+### How Server-side Rendering
+
+- How does Next.js make it possible to fetch data at request time?
+- How does Next.js make it possible to get access to the incoming request which will facilitate fetching data personalized for a user.
