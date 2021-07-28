@@ -1,3 +1,5 @@
+import { request } from "express"
+
 ### Incremental Static Regeneration
 1. There was a need to update only those pages which needed a change without having to rebuild the entire app.
 2. Incremental Static Regeneration.
@@ -91,3 +93,28 @@ Ex: User dashboard page
 - It is private, that is behind a login screen
 - Highly user-specify and SEO in not relevant
 - No need to pre-render the data
+
+## Pre-rendering & Data Fetching
+
+- Pre-rendering refers to the process of generating HTML in advance which results in better performance and SEO
+- Next JS supports two forms of pre-rendering - Static Generation and Server-side Rendering
+
+1. Static Generation
+
+- A method of pre-rendering where the HTML pages are generated at build time
+- Pages can be build once, cached by a CDN and served to clients almost instantly
+- Example: Marketing or Blogging site
+- For a normal page, use getStaticProps function to fetch the data ahead of time
+- For a dynamic page, you also need the getStaticPaths function
+- fallback: false | true | 'blocking'
+- Pages cannot be updated without a full re-build
+- Incremental Static Regeneration
+
+2. Server-side Rendering
+
+- Fetch data at request time
+- Personalize data based on user clientInformation in the incoming request
+- Example: News listing page
+- getStaticProps function helps with SSR data fetching
+- Combining pre-rendering with client-side data fetching
+- Shallow routing - Routing without calling getStaticProps/getServerSideProps
