@@ -54,3 +54,24 @@
 
 - How does Next.js make it possible to fetch data at request time?
 - How does Next.js make it possible to get access to the incoming request which will facilitate fetching data personalized for a user.
+
+### getServerSideProps
+
+1.
+- getServerSideProps runs only the server side
+- The function will never run client-side
+- The code you write inside getStaticProps will not even be included in the JS bundle that is sent to the browser
+
+2.
+- You can server-side code directly in getStaticProps
+- Accessing the file system using the fs module or querying a database can be done inside getStaticProps.
+- You also do not have worry about including API keys in getStaticProps as that will not make it to the browser
+
+3.
+- getStaticProps is allowed only in a page and cannot be run from a regular component file
+- It is used for pre-rendering and not client-side data fetching
+
+4.
+- getServerSideProps should return an object and object should contain a props key which is an object
+
+5. getServerSideProps wil run at request time
