@@ -75,3 +75,19 @@
 - getServerSideProps should return an object and object should contain a props key which is an object
 
 5. getServerSideProps wil run at request time
+
+## Client-side Data fetching
+
+1. Two forms of pre-rendering
+- Static Generation & Server-side Rendering
+
+2. How to fetch data
+- getStaticProps & getServerSideProps
+
+3. You might not always need to pre-render the data
+
+Ex: User dashboard page
+
+- It is private, that is behind a login screen
+- Highly user-specify and SEO in not relevant
+- No need to pre-render the data
